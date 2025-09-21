@@ -1,0 +1,36 @@
+{
+  "live_data": {
+    "step1_raw_material": {
+      "current": {},
+      "timestamp": ""
+    },
+    "step2_proportioning": {
+      "current": {},
+      "timestamp": ""
+    },
+    "step3_preheater": {
+      "current": {},
+      "timestamp": ""
+    },
+    "step4_kiln": {
+      "current": {},
+      "timestamp": ""
+    },
+    "step5_cooling": {
+      "current": {},
+      "timestamp": ""
+    },
+    "step6_packing": {
+      "current": {},
+      "timestamp": ""
+    }
+  },
+  "alerts": {
+    "active": {},
+    "history": {}
+  },
+  "dashboard_config": {
+    "refresh_rate": 5000,
+    "chart_timespan": 3600
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "rules": {
+    "live_data": {
+      ".read": true,
+      ".write": true
+    },
+    "alerts": {
+      ".read": true,
+      ".write": true
+    },
+    "dashboard_config": {
+      ".read": true,
+      ".write": true
+    }
+  }
+}
