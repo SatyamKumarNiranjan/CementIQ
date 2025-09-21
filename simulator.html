@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cement.AI - Simulator</title>
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+  <!-- Styles -->
+  <link href="styles.css" rel="stylesheet">
+  <script>
+    // TODO: replace with your Firebase config
+    const firebaseConfig = {
+      apiKey: "YOUR_API_KEY",
+      authDomain: "YOUR_AUTH_DOMAIN",
+      databaseURL: "YOUR_DATABASE_URL",
+      projectId: "YOUR_PROJECT_ID",
+      storageBucket: "YOUR_STORAGE_BUCKET",
+      messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+      appId: "YOUR_APP_ID"
+    };
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  <script src="simulator.js" defer></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">CementIQ</div>
+    
+    <div class="nav-links">
+      <a href="index.html">Dashboard</a>
+      <a href="simulator.html" class="active">Simulator</a>
+      <!-- <a href="#alerts">Alert Customization</a> -->
+    </div>
+    <div class="user-info">Hi, Ishant Khurana</div>
+  </nav>
+
+  <div class="main-container">
+    <div class="dashboard-content">
+      <div class="dashboard-header">
+        <h1>Simulator</h1>
+        <div class="time-display" id="simTime">--:--:--</div>
+      </div>
+
+      <div class="simulator-frame" id="simulatorFrame">
+        <div class="image-display">
+          <img id="stepImage" src="images/default.png" alt="Step Image" />
+        </div>
+      </div>
+
+      <div class="sim-controls" id="simControls">
+        <!-- JS will inject 15 controls here -->
+      </div>
+    </div>
+
+    <div class="sidebar">
+      <div class="alerts-panel efficiency-panel">
+        <h3>Alerts</h3>
+        <div id="outOfBoundsMsg" class="sidebar-message hidden">
+          You are out of bound, please look into the process.
+        </div>
+      </div>  
+
+      <div class="alerts-panel efficiency-panel">
+        <h3>Efficiency</h3>
+        <div id="efficiencyMsg" class="sidebar-message hidden"></div>
+      </div> 
+    </div>
+
+    <!-- Submit button fixed bottom-right -->
+    <div class="submit-fixed">
+      <button id="calculateBtn" class="calculate-button">Submit</button>
+    </div>
+  </div>
+</body>
+</html>
